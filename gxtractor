@@ -5,14 +5,15 @@
 import sys
 import re
 
+shellcode = ""
+lenght = 0
+
 def help_usage():
     print("Usage: objdump -d <input_file> | gxtractor")
 
 def main():
     if not sys.stdin.isatty():
         try:
-            shellcode = ""
-            lenght = 0
             while 1:
                 item = sys.stdin.readline()
                 if item:
@@ -25,10 +26,10 @@ def main():
                             lenght += 1
                 else: 
                     break
-                print(shellcode)
-                print("Shellcode Lenght: " + str(lenght))
         except:
             help_usage()
+        print(shellcode)
+        print("Shellcode Lenght: " + str(lenght))
     else:
         help_usage()
         
