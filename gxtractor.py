@@ -1,8 +1,10 @@
+# Based on ShellcodeReports
+
 import sys
 import re
 
 def help_usage():
-    print("Usage: objdump <input_file> | gxtractor")
+    print("Usage: objdump -d <input_file> | gxtractor")
 
 def main():
     if not sys.stdin.isatty():
