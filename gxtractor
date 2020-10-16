@@ -5,13 +5,12 @@
 import sys
 import re
 
-shellcode = ""
-lenght = 0
-
 def help_usage():
     print("Usage: objdump -d <input_file> | gxtractor")
 
 def main():
+    shellcode = ""
+    lenght = 0
     if not sys.stdin.isatty():
         try:
             while 1:
