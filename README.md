@@ -4,5 +4,5 @@ Gate Extractor (gxtractor) is a tool that allows you to extract shellcode from p
 ## Usage
 
 ```
-objdump -d payload | gxtractor
+objdump -d payload | ./gxtractor
 ```
